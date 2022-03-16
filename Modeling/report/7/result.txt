@@ -1,0 +1,81 @@
+              GPSS World Simulation Report - l7.18.1
+
+
+                   Friday, December 24, 2021 04:06:37  
+
+           START TIME           END TIME  BLOCKS  FACILITIES  STORAGES
+                0.000           3058.002    33        5          0
+
+
+              NAME                       VALUE  
+          COM1                        10004.000
+          COM2                        10008.000
+          FAILURE                        30.000
+          L_COM1                         17.000
+          L_COM2                         23.000
+          L_END                          31.000
+          L_OP1                           2.000
+          L_OP2                           7.000
+          L_OP3                          12.000
+          N_FAILURE                   10005.000
+          OP1                         10000.000
+          OP2                         10001.000
+          OP3                         10002.000
+          P_FAILURE                   10006.000
+          QUEUE1                      10003.000
+          QUEUE2                      10007.000
+          SUCCESS                        29.000
+
+
+ LABEL              LOC  BLOCK TYPE     ENTRY COUNT CURRENT COUNT RETRY
+                    1    GENERATE           300             0       0
+L_OP1               2    GATE               300             0       0
+                    3    SEIZE              121             0       0
+                    4    ADVANCE            121             0       0
+                    5    RELEASE            121             0       0
+                    6    TRANSFER           121             0       0
+L_OP2               7    GATE               179             0       0
+                    8    SEIZE               59             0       0
+                    9    ADVANCE             59             0       0
+                   10    RELEASE             59             0       0
+                   11    TRANSFER            59             0       0
+L_OP3              12    GATE               120             0       0
+                   13    SEIZE               51             0       0
+                   14    ADVANCE             51             0       0
+                   15    RELEASE             51             0       0
+                   16    TRANSFER            51             0       0
+L_COM1             17    QUEUE              180             0       0
+                   18    SEIZE              180             0       0
+                   19    DEPART             180             0       0
+                   20    ADVANCE            180             0       0
+                   21    RELEASE            180             0       0
+                   22    TRANSFER           180             0       0
+L_COM2             23    QUEUE               51             0       0
+                   24    SEIZE               51             0       0
+                   25    DEPART              51             0       0
+                   26    ADVANCE             51             0       0
+                   27    RELEASE             51             0       0
+                   28    TRANSFER            51             0       0
+SUCCESS            29    TRANSFER           231             0       0
+FAILURE            30    TRANSFER            69             0       0
+L_END              31    SAVEVALUE          300             0       0
+                   32    SAVEVALUE          300             0       0
+                   33    TERMINATE          300             0       0
+
+
+FACILITY         ENTRIES  UTIL.   AVE. TIME AVAIL. OWNER PEND INTER RETRY DELAY
+ OP1                121    0.788      19.924  1        0    0    0     0      0
+ OP2                 59    0.772      40.036  1        0    0    0     0      0
+ OP3                 51    0.711      42.640  1        0    0    0     0      0
+ COM1               180    0.883      15.000  1        0    0    0     0      0
+ COM2                51    0.500      30.000  1        0    0    0     0      0
+
+
+QUEUE              MAX CONT. ENTRY ENTRY(0) AVE.CONT. AVE.TIME   AVE.(-0) RETRY
+ QUEUE1              2    0    180     61     0.279      4.737      7.165   0
+ QUEUE2              1    0     51     48     0.004      0.212      3.598   0
+
+
+SAVEVALUE               RETRY       VALUE
+ N_FAILURE                0         69.000                            
+ P_FAILURE                0          0.230                            
